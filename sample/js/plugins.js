@@ -4,5 +4,9 @@ var $plugins =
 [
 {"name":"Community_Basic","status":true,"description":"基本的なパラメーターを設定するプラグインです。","parameters":{"cacheLimit":"20","screenWidth":"816","screenHeight":"624","changeWindowWidthTo":"","changeWindowHeightTo":"","renderingMode":"auto","alwaysDash":"off"}},
 {"name":"Yami_SkipTitle","status":true,"description":"Skip the title scene for testing purpose.","parameters":{}},
-{"name":"flmmlonhtml5","status":true,"description":"","parameters":{}}
+{"name":"flmmlonhtml5","status":true,"description":"","parameters":{}},
+{"name":"FlMMLPlayerForRPGMV","status":true,"description":"FlMML互換のMMLファイルを再生できるようにするプラグインです。","parameters":{}},
+{"name":"DWindow","status":true,"description":"動的ウィンドウ生成プラグイン","parameters":{"X座標の変数番号":"11","Y座標の変数番号":"12","横幅の変数番号":"13","高さの変数番号":"14","最前面に表示":"OFF","ピクチャに含める":"0"}},
+{"name":"DTextPicture","status":true,"description":"動的文字列ピクチャ生成プラグイン","parameters":{}},
+{"name":"flmmlworker","status":true,"description":"","parameters":{}}
 ];
