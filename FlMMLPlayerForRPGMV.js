@@ -33,25 +33,25 @@
 *   
 */
 
-(function () {
-    function FlMMLMV() { }
-    FlMMLMV.bgmDir = 'audio/bgm/';
-    FlMMLMV.bgmBuffer = new FlMMLonHTML5('js/plugins/flmmlworker.js');
+// 依存プラグイン導入チェック
+if (typeof FlMMLonHTML5 !== "function") {
+    throw new Error(
+        "Dependency plug-in 'FlMMLonHTML5' is not installed.");
+};
 
-    //　プラグインコマンドパラメータオブジェクト
-    FlMMLMV.MmlPlayerArguments = function() {
-        this.filename = "";
-        this.mml = "";
-        this.loop = false;
-        this.volume = 100;
-    };
+function FlMMLMV() { }
+FlMMLMV.bgmDir = 'audio/bgm/';
+FlMMLMV.bgmBuffer = new FlMMLonHTML5('js/plugins/flmmlworker.js');
+//　プラグインコマンドパラメータオブジェクト
+FlMMLMV.MmlPlayerArguments = function() {
+    this.filename = "";
+    this.mml = "";
+    this.loop = false;
+    this.volume = 100;
+};
+
+(function () {    
     FlMMLMV.bgmArgs = new FlMMLMV.MmlPlayerArguments();
-
-    // 依存プラグイン導入チェック
-    if (typeof FlMMLonHTML5 !== "function") {
-        throw new Error(
-            "Dependency plug-in 'FlMMLonHTML5' is not installed.");
-    };
 
     // プラグインコマンドの定義
     var _Game_Interpreter_pluginCommand = Game_Interpreter.prototype.pluginCommand;
