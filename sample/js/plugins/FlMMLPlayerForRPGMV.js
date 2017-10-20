@@ -49,10 +49,9 @@ FlMMLMV.MmlPlayerArguments = function() {
     this.loop = false;
     this.volume = 100;
 };
+FlMMLMV.bgmArgs = new FlMMLMV.MmlPlayerArguments();
 
-(function () {    
-    FlMMLMV.bgmArgs = new FlMMLMV.MmlPlayerArguments();
-
+(function () {
     // プラグインコマンドの定義
     var _Game_Interpreter_pluginCommand = Game_Interpreter.prototype.pluginCommand;
     Game_Interpreter.prototype.pluginCommand = function (command, args) {
